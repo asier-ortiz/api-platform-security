@@ -82,7 +82,6 @@ const handleSubmit = async () => {
 
     if (!response.ok) {
         const data = await response.json();
-        console.log(data);
         error.value = data.error;
 
         return;
@@ -92,7 +91,6 @@ const handleSubmit = async () => {
     password.value = '';
     const userIri = response.headers.get('Location');
     emit('user-authenticated', userIri);
-
 }
 
 </script>

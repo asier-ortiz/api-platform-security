@@ -16,8 +16,8 @@ class MainController extends AbstractController
     {
         return $this->render('main/homepage.html.twig', [
             'userData' => $normalizer->normalize($user, 'jsonld', [
-                'groups' => ['user:read']
-            ])
+                'groups' => ['user:read'],
+            ]),
         ]);
     }
 }

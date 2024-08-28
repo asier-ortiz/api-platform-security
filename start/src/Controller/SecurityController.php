@@ -10,7 +10,6 @@ use Symfony\Component\Security\Http\Attribute\CurrentUser;
 
 class SecurityController extends AbstractController
 {
-
     #[Route('/login', name: 'app_login', methods: ['POST'])]
     public function login(IriConverterInterface $iriConverter, #[CurrentUser] $user = null): Response
     {
@@ -28,7 +27,6 @@ class SecurityController extends AbstractController
     #[Route('/logout', name: 'app_logout')]
     public function logout(): void
     {
-        throw new \Exception('This should never be reached');
+        throw new \Exception('This should never be reached!');
     }
-
 }
